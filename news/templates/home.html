@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Últimas Notícias</h1>
+
+    {% for noticia in noticias %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">{{ noticia.titulo }}</h3>
+                
+                {% if noticia.imagem %}
+                    <img src="{{ noticia.imagem.url }}" alt="{{ noticia.titulo }}" class="img-fluid mb-2">
+                {% endif %}
+                
+                <p class="card-text">{{ noticia.conteudo|truncatewords:30 }}</p>
+                <small class="text-muted">Por {{ noticia.autor }} - {{ noticia.data_publicacao|date:"d/m/Y H:i" }}</small>
+                
+                <a href="{% url 'detalhe_noticia' noticia.id %}" class="btn btn-primary mt-2">Leia mais</a>
+            </div>
+        </div>
+    {% empty %}
+        <p>Nenhuma notícia publicada ainda.</p>
+    {% endfor %}
+</div>
+
+<!-- Botão fixado para criar notícias -->
+<div style="position: fixed; bottom: 20px; right: 20px;">
+    <a href="{% url 'criar_noticia' %}" class="btn btn-success btn-lg">Criar Notícia</a>
+</div>
+
+{% endblock %}
+
+
+

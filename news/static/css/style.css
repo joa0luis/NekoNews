@@ -1,0 +1,96 @@
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0); /* Ajusta a opacidade para escurecer */
+  z-index:-1;
+}
+
+/* Definir um fundo com imagem */
+body {
+    background: url("/static/images/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+
+/* Estilizar um cabeçalho */
+header {
+    background-color: rgba(79, 0, 181, 0.768);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Estilizar os botões */
+button {
+    background-color: #ff6600;
+    border: none;
+    color: rgb(244, 16, 16);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+.botao-criar-noticia {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #050605;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao-criar-noticia:hover {
+    background-color: #010101;
+   color: rgb(0, 0, 0);
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #000000);
+    font-family: 'Arial', sans-serif;
+}
+
+.card {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    background: #4304e0;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: #4300deeb;
+}
+
+.btn-success {
+    background: #4300deeb;
+}
+
+
+.btn-success:hover {
+    background: #4300deeb;
+}
+
+body {
+    background: url('/static/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: rgb(218, 213, 213); /* Ajuste a cor do texto conforme necessário */
+}
